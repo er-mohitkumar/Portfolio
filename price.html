@@ -1,0 +1,50 @@
+<html>
+<head><link rel="stylesheet" href="price.css">
+</head>
+<body>
+<script type="text/javascript" src="myScript2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#total,#Final,#discount,#adiscount,#sgst,#cgst").show();
+  });
+  $("#wnumb,#xnumb,#ynumb,#znumb").on({
+    mouseenter: function(){
+      $(this).css("background-color", "lightgray");
+    },  
+    mouseleave: function(){
+      $(this).css("background-color", "D0F4B1");
+    }, 
+    click: function(){
+      $(this).css("background-color", "yellow");
+    }  
+  });
+
+});
+</script>
+<h1>Online Shopping Bill Calculator</h1>
+<table>
+<tr>
+<td >Item 1 Price:-
+<input id="wnumb" type="number"></td>
+<td>Item 2 Price:-
+<input id="xnumb" type="number"></td></tr><tr>
+<td>Item 3 Price:-
+<input id="ynumb" type="number"></td>
+<td>Item 4 Price:-
+<input id="znumb" type="number"></td></tr>
+<tr><br>
+<td style="width:60px; height:20px"><button type="button" onclick="calculate()">
+Calculate</button></td></tr>
+<tr><td>Total Amount:-<input id="total"></td>
+<td>Discount:-<input id="discount"<td></tr><tr>
+<td >Amount After Discount:-<input id="adiscount"></td>
+<td style="width:30px">SGST(5%):-<input id="sgst"></td></tr>
+<tr><td>CGST(5%):-<input id="cgst"></td>
+<td>Final Amount:-<input id="Final"></td>
+</tr>
+
+</script>
+</body>
+</html>

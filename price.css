@@ -1,0 +1,31 @@
+#wnumb,#xnumb,#ynumb,#znumb,#total,#sgst,#cgst,#discount,#Final,#adiscount{
+background-color:yellow;
+color:black;
+}
+Body{
+	size:100%;
+}
+table{
+	width:auto;
+	height:auto;
+}
+h1{
+background-color:skyblue;
+width:500px;
+transition:width 1.5s;
+}
+h1:hover{
+	width:1500px;
+	height:50px;
+	background-color:D0F4B1;
+}
+#total,#Final,#discount,#adiscount,#sgst,#cgst {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+#total,#Final,#discount,#adiscount,#sgst,#cgst {
+  padding: 5px;
+  display: none;
+}

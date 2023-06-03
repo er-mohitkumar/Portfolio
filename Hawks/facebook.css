@@ -1,0 +1,288 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-color: rgb(233, 229, 248);
+}
+
+table {
+    height: 100%;
+    border-collapse: collapse;
+    background-color: #DEE6FE;
+
+}
+
+a {
+    color: #7CB7F6;
+}
+
+ul ul1 {
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+}
+
+ul1 li1 {
+    display: inline;
+}
+
+
+ul li a {
+    background-color: #16CB73;
+    color: white;
+    padding: 10px 100px;
+    text-decoration: none;
+    border-radius: 4px 4px 4px 4px;
+}
+
+ul1 li1 a {
+    background-color: rgb(22, 111, 237);
+    color: white;
+    padding: 2px 4px;
+    text-decoration: none;
+
+
+}
+
+/* ul li a:hover {
+    background-color: skyblue;
+} */
+
+/* ul1 li1 a:hover {
+    background-color: #4CAF50;
+}
+*/
+button {
+    background: rgb(149, 145, 145);
+    width: 19px;
+    height: 20px;
+    border-radius: 80%;
+    text-align: center;
+    color: white;
+    border: 1px solid black;
+}
+
+.WebContainer {
+    width: 100%;
+    min-width: 1000px;
+    height: auto;
+}
+
+#class {
+    width: 25%;
+    padding: 3px 3px;
+    margin: 2;
+    border-radius: 4px;
+    border: 0;
+}
+
+p {
+    color: rgb(131, 136, 139);
+}
+
+select {
+
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-right: 13px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(22, 111, 237);
+}
+
+div {
+    border-radius: 5px;
+    background-color: DEE6FE;
+    padding: 20px;
+}
+
+#emailph,
+#forgotten {
+    margin-left: 5px;
+}
+
+#pass {
+    margin-left: 105px;
+}
+
+#image {
+    width: 650px;
+    height: 400px;
+    margin: 50px;
+}
+
+.btn {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+    height: 40px;
+}
+
+.btn:hover {
+    background-color: rgb(22, 111, 237);
+}
+
+#facebookphoto {
+    background-color: #0C4A95;
+    color: white;
+
+}
+
+td {
+    width: 50%;
+}
+
+#fbpara {
+    text-align: justify;
+    text-indent: 50px;
+    color: #0C4A95;
+    font-size: 23px;
+}
+
+#forgotten {
+    color: #a0c5f3;
+    padding-bottom: 10px;
+}
+
+#fbtext {
+    font-size: 40px;
+    text-align: center;
+}
+
+p a {
+    color: #a0c5f3;
+}
+
+#emailph {
+    display: grid;
+}
+
+#emailtext {
+    padding: 100px;
+}
+
+#pass {
+    display: grid;
+}
+
+#emailpass {
+    display: flex;
+}
+
+#emailph,
+#emailpass input {
+    width: 250px;
+}
+
+#login {
+    width: 100%;
+    background-color: rgb(22, 111, 237);
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 80%;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+#password,
+#phone {
+    width: 100%;
+}
+
+#login:hover {
+    background-color: #4CAF50;
+}
+
+@media only screen and (max-width: 600px) {
+    #facebookphoto {
+        display: grid;
+        text-align: justify;
+
+    }
+
+    #emailpass {
+        display: flex;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+    }
+
+    #fbpara {
+        display: grid;
+        margin: 50px;
+        padding-left: 60px;
+        padding-right: 60px;
+        color: #0C4A95;
+        font-size: 23px;
+        width: 100%;
+        text-indent: 0;
+    }
+
+    #image {
+        margin: 0;
+    }
+
+    #facebookform {
+        display: grid;
+        width: 100%;
+    }
+
+    #table {
+        display: flex;
+    }
+
+    #fbform {
+        width: 100%;
+    }
+
+    .bottom {
+        width: 100%;
+    }
+
+    #fbtext {
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+}
