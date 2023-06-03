@@ -30,6 +30,7 @@
 
             <div class="header-text">
                 <span id="textContainer"></span>
+
                 <h1>
 
                     I'm a <span>Web Developer</span><br>Pursuing B-tech in <br>Computer Science
@@ -257,6 +258,8 @@
         })
     </script>
 
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
 
     <script>
         var loader = document.getElementById("preloader");
@@ -264,10 +267,6 @@
         window.addEventListener("load", function () {
             loader.style.display = "none";
         })
-
-
-
-
 
         document.addEventListener("DOMContentLoaded", function () {
             var user_name = prompt("Please enter your good name: ");
@@ -286,16 +285,11 @@
                     clearInterval(interval);
                     speakText(text);
                 }
-            }, 50);
-            // Adjust the animation speed as needed
+            }, 50); // Adjust the animation speed as needed
         }
-
         function speakText(text) {
-            var utterance = new SpeechSynthesisUtterance(text);
-            speechSynthesis.speak(utterance);
-            var container = document.getElementById("textContainer");
+            responsiveVoice.speak(text);
         }
-
 
 
 
