@@ -4,6 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+#developer{
+    color:3374FF;
+}
 
 html {
     scroll-behavior: smooth;
