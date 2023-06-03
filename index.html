@@ -29,11 +29,10 @@
             </nav>
 
             <div class="header-text">
-                <p id="welcome"></p><br>
-              
-                
+                <span id="textContainer"></span>
                 <h1>
-                    I'm a  <span>Web Developer</span><br>Pursuing B-tech in <br>Computer Science
+
+                    I'm a <span>Web Developer</span><br>Pursuing B-tech in <br>Computer Science
                     Engineering</h1>
             </div>
         </div>
@@ -266,26 +265,37 @@
             loader.style.display = "none";
         })
 
-        var user_name = prompt("Please enter your good name: ");
-        var welcomeuser = document.getElementById("welcome");
-        speakTest();
-        welcomeuser.innerHTML = ("Welcome " + user_name + " to my portfolio website!");
-        if ('speechSynthesis' in window) {
 
-    function speakText() {
-        var text = ("Welcome" + user_name + "to my portfolio website!"); // Replace with the line you want to be read
-        var utterance = new SpeechSynthesisUtterance(text);
-        utterance.rate = 1.0; // Speech rate (0.1 to 10)
-        utterance.pitch = 1.0; // Speech pitch (0 to 2)
-        utterance.voice = speechSynthesis.getVoices()[0]; // Set a specific voice
-        speechSynthesis.speak(utterance);
-    }
 
-    // API supported, proceed with the code
-} else {
-    window.alert("sound not supported");
-    // API not supported, display an error message
-}
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var user_name = prompt("Please enter your good name: ");
+            var text = "Welcome " + user_name + " to my portfolio website";
+            animateAndSpeakText(text);
+        });
+        function animateAndSpeakText(text) {
+            var container = document.getElementById("textContainer");
+            container.textContent = "";
+
+            var index = 0;
+            var interval = setInterval(function () {
+                container.textContent += text.charAt(index);
+                index++;
+                if (index >= text.length) {
+                    clearInterval(interval);
+                    speakText(text);
+                }
+            }, 50);
+            // Adjust the animation speed as needed
+        }
+
+        function speakText(text) {
+            var utterance = new SpeechSynthesisUtterance(text);
+            speechSynthesis.speak(utterance);
+            var container = document.getElementById("textContainer");
+        }
+
 
 
 
