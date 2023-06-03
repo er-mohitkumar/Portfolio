@@ -268,8 +268,24 @@
 
         var user_name = prompt("Please enter your good name: ");
         var welcomeuser = document.getElementById("welcome");
+        speakTest();
         welcomeuser.innerHTML = ("Welcome " + user_name + " to my portfolio website!");
-        window.alert("Welcome " + user_name);
+        if ('speechSynthesis' in window) {
+
+    function speakText() {
+        var text = ("Welcome" + user_name + "to my portfolio website!"); // Replace with the line you want to be read
+        var utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 1.0; // Speech rate (0.1 to 10)
+        utterance.pitch = 1.0; // Speech pitch (0 to 2)
+        utterance.voice = speechSynthesis.getVoices()[0]; // Set a specific voice
+        speechSynthesis.speak(utterance);
+    }
+
+    // API supported, proceed with the code
+} else {
+    window.alert("sound not supported");
+    // API not supported, display an error message
+}
 
 
 
